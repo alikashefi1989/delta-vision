@@ -1,0 +1,45 @@
+.well {
+    border-radius: 2px;
+    background-clip: padding-box;
+    box-shadow: 0 0 3px rgba(0,0,0,.2);
+    color: #262626;
+    position: relative;
+    background-color: #fbfbfb;
+}
+.with-header {
+    .header {
+     
+        padding: 10px;
+        border-radius: 2px 2px 0 0;
+        border-bottom: 3px solid #e5e5e5;
+    }
+}
+.bordered-radius{
+    border-radius: 4px;
+}
+.widget .fa-refresh {
+    cursor: pointer;
+    position: relative;
+    top: 8px;
+    margin: 0 12px;
+}
+.tabs-monitoring .nav-tabs a {
+    color: #495057;
+    box-shadow: none;
+    border-color: transparent !important;
+    &:active{
+        box-shadow: none;
+        border-color: transparent !important;
+    }
+}
+.tab-content .details ul {
+    margin: 0;
+    padding: 0;
+    li{
+        list-style: none;
+        padding: 8px 0;
+    }
+}
+.tabs-monitoring .tab-content {
+    box-shadow: none;
+}

@@ -1,0 +1,117 @@
+@each $color, $value in $theme-colors {
+    .btn-#{$color} {
+        // @include button-variant(linear-gradient(180deg, lighten($value, 10) 50%, $value 100%), $value);
+        @include gradient-y($value, darken($value, 10), 15%, 100%);
+        border-color: darken($value, 10);
+        // box-shadow: 0 -2px 0 0 darken($value, 15) inset !important;
+    }
+}
+
+// .btn-group-xs > .btn,
+// .btn-xs {
+//     padding: 0.25rem 0.4rem;
+//     font-size: 0.875rem;
+//     line-height: 0.5;
+//     border-radius: 0.2rem;
+// }
+
+// .btn-xs {
+//     // line-height: ensure proper height of button next to extra small input
+//     @include button-size($padding-y, $padding-x, $font-size, $line-height, $border-radius);
+// }
+
+// .btn-group-xs > .btn,
+.btn-xs {
+    @include button-size(0.25rem, 0.4rem, 0.875rem, 0.5, 0.2rem);
+}
+
+.btn-group-xs > .btn {
+    @extend .btn-xs;
+}
+
+/* custom btn style */
+.z-btn-primary,
+.z-btn-light,
+.z-btn-default {
+    //
+    // font-family: "LatoMedium" !important;
+    font-weight: 500;
+    color: #fff;
+    font-size: 15px;
+    border: 0;
+    // padding: 8px 20px 9px;
+    border-radius: 6px;
+    // cursor: pointer;
+    outline: none !important;
+    // display: inline-block;
+    // width: auto !important;
+    // margin-right: 8px;
+    line-height: 1.2;
+    text-decoration: none !important;
+    text-align: center;
+    // -webkit-appearance: none;
+    // -moz-appearance: none;
+    appearance: none;
+    //
+}
+
+.z-btn-primary {
+    border: 0 !important;
+    box-shadow: 0 -2px 0 0 #0061ca inset !important;
+    background: transparent linear-gradient(to top, #0279ff, #00a3f3) 0 0 no-repeat padding-box !important;
+    padding: 7px 20px 8px !important;
+    // margin-right: 0 !important;
+    min-width: 31px;
+    transition: unset;
+    &:hover {
+        background: transparent linear-gradient(#02acff 0, #006be4 100%) 0 0 no-repeat padding-box !important;
+        box-shadow: 0 -2px 0 0 #0159b9 inset !important;
+        color: #fff;
+    }
+    &:active {
+        border: 0 !important;
+        box-shadow: none !important;
+        background: #2385ef !important;
+        top: 1px !important;
+        position: relative;
+        padding: 7px 20px 8px !important;
+        color: #fff;
+    }
+}
+.z-btn-light {
+    min-width: 31px;
+    border: solid 1px #d0d4df !important;
+    padding: 6px 20px 7px;
+    color: #222833 !important;
+    box-shadow: 0 -1px 0 0 #d0d4df inset !important;
+    background: transparent linear-gradient(#fcfdff 0, #eaeef5 100%) 0 0 no-repeat padding-box !important;
+    transition: unset;
+
+    &:hover {
+        background: transparent linear-gradient(#fcfdff 0, #dee5f1 100%) 0 0 no-repeat padding-box !important;
+    }
+    &:active {
+        top: 1px;
+        box-shadow: none !important;
+        position: relative;
+        background: #ecf0f7 !important;
+    }
+}
+// .z-btn-default {
+//     border: solid 1px #d0d4df !important;
+//     padding: 6px 20px 7px;
+//     color: #222833 !important;
+//     box-shadow: 0 -1px 0 0 #d0d4df inset !important;
+//     background: transparent linear-gradient(#fcfdff 0, #eaeef5 100%) 0 0 no-repeat padding-box !important;
+//     // margin-right: 0 !important;
+//     min-width: 31px;
+//     &:hover {
+//         background: transparent linear-gradient(#fcfdff 0, #dee5f1 100%) 0 0 no-repeat padding-box !important;
+//     }
+//     &:active {
+//         top: 1px;
+//         box-shadow: none !important;
+//         position: relative;
+//         background: #ecf0f7 !important;
+//     }
+// }

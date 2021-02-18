@@ -1,0 +1,15 @@
+.row-removeable-table-wrapper {
+    width: calc(100% - 40px);
+
+    .row-removeable-table {
+        border: 0 !important;
+
+        .remove-button-cell {
+            position: absolute;
+            padding: 0;
+            border-top: 0px;
+            right: -40px;
+            border: 0px;
+        }
+    }
+}

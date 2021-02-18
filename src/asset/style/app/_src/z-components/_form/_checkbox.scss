@@ -1,0 +1,215 @@
+.app-CHECKBOX_____DELETE_ME {
+    input {
+        & + label {
+            display: block;
+            margin: 0.2em;
+            cursor: pointer;
+            padding: 0.2em;
+            &:before {
+                content: "\2714";
+                border: 0.1em solid #000;
+                border-radius: 0.2em;
+                position: relative;
+                display: inline-block;
+                width: 18px;
+                height: 18px;
+                padding-bottom: 0.3em;
+                vertical-align: bottom;
+                color: transparent;
+                transition: 0.2s;
+                text-align: center;
+                margin: 0 2px 0 3px;
+                font-size: 15px;
+                top: -3px;
+            }
+            &:active:before {
+                transform: scale(0);
+            }
+        }
+        &:checked + label:before {
+            background-color: #3c85fb;
+            border-color: #3c85fb;
+            color: #fff;
+        }
+        &:disabled + label:before {
+            transform: scale(1);
+            border-color: #aaa;
+        }
+    }
+}
+
+.app-CHECKBOX {
+    input[type="checkbox"] {
+        &.app-checkbox-round {
+            height: 0;
+            width: 0;
+            visibility: hidden;
+
+            & + label {
+                cursor: pointer;
+                text-indent: -9999px;
+                width: 40px;
+                height: 19px;
+                background-color: $white;
+                //display: block;
+                border-radius: 100px;
+                position: relative;
+                border: 1px solid #ddd;
+                //
+                display: inline-block;
+                margin-bottom: 0;
+                line-height: 19px;
+
+                &:after {
+                    content: "";
+                    position: absolute;
+                    top: 1px;
+                    left: 2px;
+                    width: 15px;
+                    height: 15px;
+                    background-color: #a1a2a6;
+                    border-radius: 90px;
+                    transition: 0.3s;
+                }
+
+                &:active:after {
+                    width: 25px;
+                }
+            }
+
+            &:checked + label:after {
+                #{$dir-mode-align}: calc(100% - 2px);
+                transform: translateX(-100%);
+                background-color: app-color(primary); // info
+            }
+        }
+    }
+
+    input[type="checkbox"] {
+        &.app-checkbox {
+            height: 0;
+            width: 0;
+            visibility: hidden;
+
+            & + label {
+                height: 25px;
+                width: 25px;
+                background-color: white;
+                border: 1px solid $template-border-color; // gray;
+                border-radius: 0.25rem;
+                position: relative;
+                // margin-bottom: 0;
+                margin-bottom: -0.4rem;
+            }
+
+            & + label:after {
+                left: 7px;
+                bottom: 4px;
+                width: 10px;
+                height: 20px;
+                border: solid app-color(primary);
+                border-radius: 3px;
+                border-width: 0 4px 4px 0;
+                -webkit-transform: rotate(45deg);
+                -ms-transform: rotate(45deg);
+                transform: rotate(45deg);
+                content: "";
+                position: absolute;
+                display: none;
+            }
+
+            &:checked + label:after {
+                display: block;
+            }
+
+            &.indeterminate + label:after {
+                left: 5px;
+                bottom: 9px;
+                width: 13px;
+                height: 4px;
+                transform: unset;
+                display: block;
+            }
+
+            &.native-style {
+                + label {
+                    height: 18px;
+                    width: 18px;
+                    background-color: $white;
+                    cursor: pointer;
+
+                    &:after {
+                        left: 5px;
+                        bottom: 4px;
+                        width: 6px;
+                        height: 11px;
+                        border: solid $white;
+                        // border-radius: 0 0 2px 0;
+                        border-radius: 0;
+                        border-width: 0 3px 3px 0;
+                        transform: rotate(49deg) skew(5deg, 0deg);
+                        transform: rotate(45deg);
+                    }
+                }
+                &:checked {
+                    + label {
+                        background-color: app-color(info);
+                        border-color: rgba($template-border-color, 0.5);
+                    }
+                }
+                &.indeterminate + label {
+                    background-color: $white;
+                    &:after {
+                        left: 3px;
+                        bottom: 7px;
+                        width: 10px;
+                        height: 2px;
+                        transform: unset;
+                        display: block;
+                        border-radius: 0px;
+                        border-width: 0 10px 2px 0;
+                        border-color: $gray-600;
+                    }
+                }
+            }
+
+            &.native-style2 {
+                + label {
+                    width: 15px;
+                    height: 15px;
+                    cursor: pointer;
+                    border: 0;
+                    background-color: unset;
+
+                    &:after {
+                        width: 15px;
+                        height: 15px;
+                        transform: rotate(0);
+                        border: 0;
+                        position: unset;
+                        bottom: unset;
+                        left: unset;
+                        display: block;
+                        background: url(/static/media/img/icon/svg-icons-2.svg) -244px -421px no-repeat;
+                        // background: url(//img.zohostatic.eu/crm/CRMClient/images/crm-svgicons_2add5d9_.svg) -244px -421px no-repeat;
+                    }
+                }
+                &:checked {
+                    + label {
+                        &:after {
+                            background: url(/static/media/img/icon/svg-icons-2.svg) -221px -421px no-repeat;
+                            // background: url(//img.zohostatic.eu/crm/CRMClient/images/crm-svgicons_2add5d9_.svg) -221px -421px
+                                // no-repeat;
+                        }
+                    }
+                }
+                &.indeterminate + label {
+                    // background-color: $white;
+                    &:after {
+                        background: url(/static/media/img/icon/svg-icons.svg) -124px -474px no-repeat;
+                    }
+                }
+            }
+        }
+    }
+}

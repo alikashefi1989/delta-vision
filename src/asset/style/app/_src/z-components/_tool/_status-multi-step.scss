@@ -1,0 +1,78 @@
+$step-component-height: 30px;
+$step-component-arrow-width: 8px;
+$step-component-between-steps: 5px;
+$step-component-padding-x: 30px;
+$step-component-padding-y: 10px;
+$step-component-color-bg: rgb(237, 237, 237);
+$step-component-color-active: rgb(0, 145, 255);
+
+.step-component {
+    display: flex;
+    align-items: center;
+    margin-left: -1 * $step-component-arrow-width +
+        $step-component-between-steps;
+    cursor: pointer;
+
+    // HOVER STYLE when its not disabled
+    &:hover:not(.disabled) {
+        .middle {
+            background-color: darken(
+                $color: $step-component-color-bg,
+                $amount: 5
+            );
+        }
+
+        .after {
+            border-left: $step-component-arrow-width solid
+                darken($color: $step-component-color-bg, $amount: 5);
+        }
+    }
+
+    // NORMAL STYLES
+    .before {
+        z-index: 1;
+        margin-right: -1 * $step-component-arrow-width;
+        border-top: ($step-component-height/2) solid transparent;
+        border-left: $step-component-arrow-width solid white;
+        border-bottom: ($step-component-height/2) solid transparent;
+    }
+
+    .middle {
+        height: $step-component-height;
+        background-color: $step-component-color-bg;
+        color: black;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: $step-component-padding-y $step-component-padding-x;
+        padding-left: $step-component-padding-x + $step-component-arrow-width;
+        min-width: 150px;
+        text-transform: capitalize;
+        transition: 0.3s;
+    }
+
+    .after {
+        z-index: 2;
+        border-top: ($step-component-height/2) solid transparent;
+        border-left: $step-component-arrow-width solid $step-component-color-bg;
+        border-bottom: ($step-component-height/2) solid transparent;
+        transition: 0.3s;
+    }
+
+    // DISABLED STYLE
+    &.disabled {
+        cursor: not-allowed;
+    }
+
+    &.active {
+        .middle {
+            background-color: $step-component-color-active;
+        }
+
+        .after {
+            z-index: 2;
+            border-left: $step-component-arrow-width solid
+                $step-component-color-active;
+        }
+    }
+}

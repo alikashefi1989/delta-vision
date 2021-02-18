@@ -1,0 +1,33 @@
+$scrollbar-bgColor-default: #f2f2f1;
+$scrollbar-thumb-bgColor-default: #c2c2c2;
+
+.thin-scroll {
+    scrollbar-width: thin;
+    scrollbar-color: $scrollbar-thumb-bgColor-default $scrollbar-bgColor-default;
+    // &::-webkit-scrollbar-track {
+    // }
+
+    &::-webkit-scrollbar {
+        width: 0.5rem;
+        height: 0.5rem;
+        background-color: $scrollbar-bgColor-default;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: $scrollbar-thumb-bgColor-default;
+    }
+}
+.ultra-thin-scroll {
+    scrollbar-width: thin;
+    scrollbar-color: $scrollbar-thumb-bgColor-default $scrollbar-bgColor-default;
+
+    &::-webkit-scrollbar {
+        width: 0.25rem;
+        height: 0.5rem;
+        background-color: $scrollbar-bgColor-default;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: $scrollbar-thumb-bgColor-default;
+    }
+}

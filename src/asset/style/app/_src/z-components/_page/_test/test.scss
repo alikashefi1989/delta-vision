@@ -1,0 +1,71 @@
+div.app-MULTI_FILE_INPUT {
+    div.custom-multi-file {
+        input.custom-multi-file-input {
+            display: none;
+        }
+        div.dragable-list-wrapper {
+            display: inline;
+            padding: 0;
+            margin: 0;
+            border: none;
+            div.dragable-item {
+                display: inline-block;
+                position: relative;
+                width: 100px;
+                height: 150px;
+                margin: 1rem;
+                padding: 0;
+                border-radius: 5px;
+                border: 2px solid rgb(51, 140, 240);
+                &:hover {
+                    cursor: move;
+                    i {
+                        display: inline;
+                        color: black;
+                        z-index: 1000;
+                    }
+                    img {
+                        opacity: 0.3;
+                    }
+                }
+                i {
+                    position: absolute;
+                    top: 4px;
+                    right: 4px;
+                    display: none;
+                    cursor: pointer;
+                }
+                img {
+                    display: inline-block;
+                    width: 96px;
+                    height: 146px;
+                    padding: 0;
+                    margin: auto;
+                    vertical-align: middle;
+                    border-radius: 3px;
+                }
+            }
+        }
+        label.custom-multi-file-label {
+            display: inline-block;
+            position: relative;
+            width: 100px;
+            height: 150px;
+            padding: 1rem;
+            margin: 1rem;
+            padding: 0;
+            background-color: rgba(51, 140, 240, 0.8);
+            border: 1px solid rgb(51, 140, 240);
+            border-radius: 5px;
+            color: black;
+            text-align: center;
+            vertical-align: middle;
+            font-weight: 300;
+            font-size: 85px;
+            cursor: pointer;
+            &:hover {
+                background-color: rgba(51, 140, 240, 0.9);
+            }
+        }
+    }
+}

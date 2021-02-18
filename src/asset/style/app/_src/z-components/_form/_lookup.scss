@@ -1,0 +1,76 @@
+// .app-LOOKUP {
+// }
+.app-lookup-modal {
+    .search-wrapper {
+        height: 2rem;
+        // border-bottom: 1px solid $gray-400;
+        width: 300px;
+        .search-icon-container {
+            position: absolute;
+            left: 4px;
+            top: 4px;
+            z-index: 4;
+            .search-icon-wrapper {
+                border: 0;
+                background-color: $white;
+                padding: 0.25rem 0.25rem;
+                .search-icon {
+                    background-image: url(/static/media/img/icon/svg-icons.svg);
+                    background-position: 0px 0px;
+                    width: 16px;
+                    height: 16px;
+                }
+            }
+        }
+        .search-input {
+            // border: 0;
+            background-color: $white;
+            box-shadow: none;
+            padding-left: 2rem;
+            // border-bottom: 1px solid $gray-400;
+            border-color: #69cff3;
+            border-radius: 0.25rem;
+            // &:hover {
+            //     border-color: $gray-600;
+            // }
+            // &:focus {
+            //     border-color: #69cff3;
+            // }
+        }
+        // .search-clear-icon-wrapper {
+        //     position: absolute;
+        //     right: 0.5rem;
+        //     top: 0.625rem;
+        //     z-index: 3;
+        //     cursor: pointer;
+        //     .search-clear-icon {
+        //         background-image: url(/static/media/img/icon/svg-icons.svg);
+        //         background-repeat: no-repeat;
+        //         background-position: -275px -1640px;
+        //         width: 11px;
+        //         height: 11px;
+        //         display: block;
+        //         opacity: 0.5;
+        //     }
+        // }
+
+        // &:hover {
+        //     border-color: $gray-600;
+        // }
+    }
+    .app-data-grid-wrapper {
+        .app-data-grid .table .thead .th {
+            border-top-width: 2px;
+            border-bottom-width: 1px;
+            border-bottom-style: solid;
+        }
+        .pager-previous-page {
+            margin-right: -0.5rem;
+        }
+        .app-pager-wrapper .pager-from,
+        .app-pager-wrapper .pager-text,
+        .app-pager-wrapper .pager-to {
+            display: none;
+        }
+    }
+}

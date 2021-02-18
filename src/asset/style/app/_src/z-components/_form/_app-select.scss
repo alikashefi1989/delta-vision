@@ -1,0 +1,33 @@
+.app-select {
+    font-size: 13px; // 13px, $input-font-size-sm
+    // > div {
+    > [class*='control'] {
+        min-height: calc(1.5em + 0.75rem + 2px - 2px);
+
+        > [class*='ValueContainer'],
+        > div {
+            height: calc(1.5em + 0.75rem + 2px - 2px);
+        }
+
+        > [class*='IndicatorsContainer'],
+        > div {
+            max-height: calc(1.5em + 0.75rem + 2px - 2px);
+        }
+    }
+    &.app-select-sm {
+        // > div {
+        > [class*='control'] {
+            min-height: calc(1.5em + 0.5rem + 2px - 2px);
+
+            > [class*='ValueContainer'],
+            > div {
+                height: calc(1.5em + 0.5rem + 2px - 2px);
+            }
+
+            > [class*='IndicatorsContainer'],
+            > div {
+                max-height: calc(1.5em + 0.5rem + 2px - 2px);
+            }
+        }
+    }
+}

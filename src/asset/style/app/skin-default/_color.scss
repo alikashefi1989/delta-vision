@@ -1,0 +1,47 @@
+$app-colors:(
+    'default':
+    (
+        'default'       :#a2a3a5,
+        'color'         :#333333,
+    )
+    ,'primary':
+    (
+        'default'       :#337ab7, // #3439B7, // #337ab7, #fe3366,
+        'color'         :#fff,
+    )
+    ,'success':
+    (
+        'default'       :#40b292,
+        'color'         :#ffffff,
+    )
+    ,'info':
+    (
+        'default'       :#338cf0, // #2dc3e8
+        'color'         :#e7f5fa,
+    )
+    ,'warning':
+    (
+        'default'       :#ffb729,
+        'color'         :#ffffff,
+    )
+    ,'danger':
+    (
+        'default'       :#b44848,
+        'color'         :#fef7f6,
+    )
+    ,'system':
+    (
+        'default'       :#01aaa4,
+        'color'         :#ffffff,
+    )
+    ,'dark':
+    (
+        'default'       :#313949, // #112442,
+        'color'         :#ffffff,
+    )
+    ,'orange':
+    (
+        'default'       :#e96454,
+        'color'         :#ffffff,
+    )
+);

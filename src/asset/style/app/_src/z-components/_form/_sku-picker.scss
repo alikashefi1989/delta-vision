@@ -1,0 +1,144 @@
+.app-sku-picker-modal {
+    .search-wrapper {
+        height: 2rem;
+        // width: 300px;
+        .search-icon-container {
+            position: absolute;
+            left: 4px;
+            top: 4px;
+            z-index: 4;
+            .search-icon-wrapper {
+                border: 0;
+                background-color: $white;
+                padding: 0.25rem 0.25rem;
+                .search-icon {
+                    background-image: url(/static/media/img/icon/svg-icons.svg);
+                    background-position: 0px 0px;
+                    width: 16px;
+                    height: 16px;
+                }
+            }
+        }
+        .search-input {
+            background-color: $white;
+            box-shadow: none;
+            padding-left: 2rem;
+            border-color: #24a2fc;
+            border-radius: 0.25rem;
+        }
+    }
+    .selected-items-count {
+        border: 1px solid #24a2fc;
+        border-radius: 0.25rem;
+        padding: 0.125rem 1rem;
+        height: 2rem;
+        max-height: 2rem;
+        display: inline-block;
+    }
+    .header-wrapper {
+        padding: 1rem 1rem 0;
+    }
+    .sku-item-wrapper {
+        display: flex;
+        .img-holder {
+            width: 60px;
+            height: 60px;
+            margin-right: 1rem;
+            .sku-img {
+                max-width: 60px;
+                max-height: 60px;
+                //
+                width: 60px;
+                height: 60px;
+            }
+        }
+        .detail {
+            font-size: 0.8rem;
+            .product {
+                font-size: 0.9rem;
+                font-weight: 700;
+            }
+            // .readable-id {
+            // }
+            // .price {
+            // }
+        }
+    }
+    .fetched-data-list-wrapper {
+        max-height: calc(100vh - 12rem);
+        min-height: calc(100vh - 12rem);
+        overflow-y: auto;
+        overflow-x: hidden;
+        .item-wrapper {
+            padding: 1rem;
+            border-bottom: 1px solid #cccccc;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .is-selected-wrapper {
+                .icon {
+                    font-size: 1.25rem;
+                    color: #cccccc;
+                    &.selected {
+                        color: #6dd400;
+                    }
+                }
+            }
+        }
+    }
+    .selected-data-list-wrapper {
+        max-height: calc(100vh - 15.5rem - 2px);
+        min-height: calc(100vh - 15.5rem - 2px);
+        overflow-y: auto;
+        overflow-x: hidden;
+        .item-wrapper {
+            padding: 1rem;
+            border-bottom: 1px solid #cccccc;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .selected-item-action-wrapper {
+                display: flex;
+                align-items: center;
+                margin-right: 1rem;
+            }
+            .change-count-btn-group {
+                border: 1px solid #ccc;
+                border-radius: 0.25rem;
+                .btn-decrease {
+                    box-shadow: none;
+                    font-size: 0.75rem;
+                }
+                .btn-count {
+                    border: 1px solid #ccc;
+                    border-top: 0;
+                    border-bottom: 0;
+                    width: 50px;
+                    box-shadow: none;
+                    cursor: default;
+                }
+                .btn-increase {
+                    box-shadow: none;
+                    font-size: 0.75rem;
+                }
+            }
+            .remove-item {
+                font-size: 1.25rem;
+                color: rgb(224, 32, 32);
+            }
+        }
+    }
+    .action-buttons-wrapper {
+        .confirm-btn {
+            background-color: rgb(205, 67, 46);
+            color: #ffffff;
+            font-size: 1rem;
+            min-width: 110px;
+        }
+        .cancel-btn {
+            background-color: rgb(227, 227, 227);
+            font-size: 1rem;
+            min-width: 110px;
+        }
+    }
+}

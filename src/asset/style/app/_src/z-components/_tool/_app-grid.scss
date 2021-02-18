@@ -1,0 +1,302 @@
+.app-data-grid-wrapper {
+  .action-list {
+    .action {
+      width: 1.5rem;
+      height: 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: $white;
+      border-radius: $border-radius;
+    }
+  }
+
+  // .app-data-grid {
+  //   & + .app-pagination-wrapper {
+  //     margin-top: 1rem;
+  //   }
+  // }
+
+  .app-data-grid {
+    min-height: 150px;
+    background-color: rgba($white, 0.6);
+    //
+    // Basic Bootstrap table
+    //
+
+    .table {
+      width: 100%;
+      margin-bottom: $spacer;
+      color: $table-color;
+      background-color: $table-bg; // Reset for nesting within parents with `background-color`.
+
+      // min-width: fit-content;
+
+      .th,
+      .td {
+        padding: $table-cell-padding;
+        vertical-align: top;
+        border-top: $table-border-width solid $table-border-color;
+      }
+
+      .thead .th {
+        vertical-align: bottom;
+        border-bottom: (2 * $table-border-width) solid $table-border-color;
+
+        //
+        // font-weight: bold;
+        font-weight: 600;
+        border-bottom: 3px double #e5e5e5;
+        // color: $gray-600;
+        font-size: 0.9rem;
+        text-transform: capitalize;
+        color: #777;
+      }
+
+      .tbody + .tbody {
+        border-top: (2 * $table-border-width) solid $table-border-color;
+      }
+
+      .tbody {
+        .tr {
+          .td {
+            font-size: 0.9rem;
+          }
+          &.row-selected {
+            background-color: #fffced;
+            // border-bottom-color: #f7efe3 !important;
+          }
+          &:last-child {
+            .td {
+              border-bottom: $table-border-width solid $table-border-color;
+            }
+          }
+        }
+      }
+    }
+
+    //
+    // Condensed table w/ half padding
+    //
+
+    .table-sm {
+      .th,
+      .td {
+        padding: $table-cell-padding-sm;
+      }
+    }
+
+    // Border versions
+    //
+    // Add or remove borders all around the table and between all the columns.
+
+    .table-bordered {
+      border: $table-border-width solid $table-border-color;
+
+      .th,
+      .td {
+        border: $table-border-width solid $table-border-color;
+      }
+
+      .thead {
+        .th,
+        .td {
+          border-bottom-width: 2 * $table-border-width;
+        }
+      }
+    }
+
+    .table-borderless {
+      .th,
+      .td,
+      .thead .th,
+      .tbody + .tbody {
+        border: 0;
+      }
+    }
+
+    // Zebra-striping
+    //
+    // Default zebra-stripe styles (alternating gray and transparent backgrounds)
+
+    .table-striped {
+      .tbody .tr:nth-of-type(#{$table-striped-order}) {
+        background-color: $table-accent-bg;
+      }
+    }
+
+    // Hover effect
+    //
+    // Placed here since it has to come after the potential zebra striping
+
+    .table-hover {
+      .tbody .tr {
+        @include hover() {
+          color: $table-hover-color;
+          // background-color: $table-hover-bg;
+          //
+          background-color: #f9f9f9;
+        }
+      }
+    }
+
+    // Table backgrounds
+    //
+    // Exact selectors below required to override `.table-striped` and prevent
+    // inheritance to nested tables.
+
+    @each $color, $value in $theme-colors {
+      @include table-row-variant(
+        $color,
+        theme-color-level($color, $table-bg-level),
+        theme-color-level($color, $table-border-level)
+      );
+    }
+
+    @include table-row-variant(active, $table-active-bg);
+
+    // Dark styles
+    //
+    // Same table markup, but inverted color scheme: dark background and light text.
+
+    // stylelint-disable-next-line no-duplicate-selectors
+    .table {
+      .thead-dark {
+        .th {
+          color: $table-dark-color;
+          background-color: $table-dark-bg;
+          border-color: $table-dark-border-color;
+        }
+      }
+
+      .thead-light {
+        .th {
+          color: $table-head-color;
+          background-color: $table-head-bg;
+          border-color: $table-border-color;
+        }
+      }
+    }
+
+    .table-dark {
+      color: $table-dark-color;
+      background-color: $table-dark-bg;
+
+      .th,
+      .td,
+      .thead .th {
+        border-color: $table-dark-border-color;
+      }
+
+      &.table-bordered {
+        border: 0;
+      }
+
+      &.table-striped {
+        .tbody .tr:nth-of-type(#{$table-striped-order}) {
+          background-color: $table-dark-accent-bg;
+        }
+      }
+
+      &.table-hover {
+        .tbody .tr {
+          @include hover() {
+            color: $table-dark-hover-color;
+            background-color: $table-dark-hover-bg;
+          }
+        }
+      }
+    }
+
+    // Responsive tables
+    //
+    // Generate series of `.table-responsive-*` classes for configuring the screen
+    // size of where your table will overflow.
+
+    .table-responsive {
+      @each $breakpoint in map-keys($grid-breakpoints) {
+        $next: breakpoint-next($breakpoint, $grid-breakpoints);
+        $infix: breakpoint-infix($next, $grid-breakpoints);
+
+        &#{$infix} {
+          @include media-breakpoint-down($breakpoint) {
+            display: block;
+            width: 100%;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+
+            // Prevent double border on horizontal scroll due to use of `display: block;`
+            > .table-bordered {
+              border: 0;
+            }
+          }
+        }
+      }
+    }
+
+    .table-head-bordered {
+      .th {
+        border: $table-border-width solid $table-border-color;
+      }
+    }
+
+    .resizer {
+      // display: inline-block;
+      // background: #dddddd;
+      width: 2rem;
+      height: 100%;
+      position: absolute;
+      right: 0;
+      // top: 0;
+      // transform: translateX(50%);
+      top: 50%;
+      transform: translate(50%, -50%);
+      z-index: 1;
+      touch-action: none;
+      cursor: col-resize !important;
+
+      // &.isResizing {
+      //   background: #a3a3a3;
+      //   // width: 2px;
+      // }
+    }
+  }
+
+  .app-data-grid-footer {
+    // .app-pagination-wrapper {
+    // }
+    .total-render {
+      font-size: 0.9rem;
+      .total-number {
+        font-size: 0.85rem;
+        font-weight: bold;
+      }
+    }
+
+    .app-grid-limit {
+      > div {
+        // border: 0;
+        min-height: 34px;
+        //
+        background: #fafafa;
+        border: 1px solid #c3c6ca;
+        color: #333;
+        text-shadow: 0 0 0 #000;
+        border-radius: 0;
+        box-shadow: none;
+        &:hover {
+          border: 1px solid #abaaaa;
+          border-bottom: 1px solid #777;
+        }
+        // &:focus {
+        //   box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.15) !important;
+        // }
+      }
+      &.app-grid-limit-sm {
+        > div {
+          min-height: 30.8px;
+        }
+      }
+    }
+  }
+}

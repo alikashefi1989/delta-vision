@@ -1,0 +1,239 @@
+
+/*#region Login Page*/
+.login-container {
+  width: 100%;
+  min-height: 100vh;
+  height: max-content;
+  background-color: $admin-primary-color;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 24px;
+  padding-top: 24px;
+}
+
+.login-container .loginbox {
+  position: relative;
+  width: 300px !important;
+  height: auto !important;
+  border: 1px solid white;
+  border-radius: 8px;
+  padding: 0 0 20px 0;
+  overflow: hidden;
+}
+
+.login-container .loginbox .loginbox-logo {
+  background-color: $admin-primary-color;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 0;
+}
+
+.login-container .loginbox .loginbox-logo .logo {
+  width: 80px;
+}
+
+.login-container .loginbox .loginbox-title {
+  position: relative;
+  text-align: center;
+  width: 100%;
+  height: max-content;
+  padding-top: 24px;
+  padding-bottom: 14px;
+  //font-family: 'Lucida Sans', 'trebuchet MS', Arial, Helvetica;
+  font-size: 20px;
+  font-weight: bold;
+  color: $admin-primary-color;
+}
+
+.login-container .loginbox .loginbox-social {
+  padding: 0 10px 10px;
+  text-align: center;
+}
+
+.login-container .loginbox .loginbox-social .social-title {
+  font-size: 14px;
+  font-weight: 500;
+  color: darkgray;
+  margin-top: 10px;
+}
+
+.login-container .loginbox .loginbox-social .social-buttons {
+  height: 80px;
+  padding: 15px 35px;
+  text-align: center;
+}
+
+.login-container .loginbox .loginbox-social .social-buttons .button-facebook {
+  // float: $dir-mode-align;
+  border: 2px solid #3b5998;
+  color: #3b5998;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  // margin-#{$dir-mode-align-inverse}: 30px;
+  body:not(.rtl) & {
+    float: left;
+    margin-right: 30px;
+  }
+  body.rtl & {
+    float: right;
+    margin-left: 30px;
+  }
+  background-color: #ffffff;
+}
+
+.login-container .loginbox .loginbox-social .social-buttons .button-facebook i {
+  font-size: 26px;
+  line-height: 50px;
+}
+
+.login-container .loginbox .loginbox-social .social-buttons .button-twitter {
+  // float: $dir-mode-align;
+  border: 2px solid #29c1f6;
+  color: #29c1f6;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  // margin-#{$dir-mode-align-inverse}: 30px;
+  body:not(.rtl) & {
+    float: left;
+    margin-right: 30px;
+  }
+  body.rtl & {
+    float: right;
+    margin-left: 30px;
+  }
+  background-color: #ffffff;
+}
+
+.login-container .loginbox .loginbox-social .social-buttons .button-twitter i {
+  font-size: 26px;
+  line-height: 50px;
+}
+
+.login-container .loginbox .loginbox-social .social-buttons .button-google {
+  border: 2px solid #ef4f1d;
+  color: #ef4f1d;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  background-color: #ffffff;
+}
+
+.login-container .loginbox .loginbox-social .social-buttons .button-google i {
+  font-size: 26px;
+  line-height: 50px;
+}
+
+.login-container .loginbox .loginbox-or {
+  position: relative;
+  text-align: center;
+  height: 20px;
+}
+
+.login-container .loginbox .loginbox-or .or {
+  position: absolute;
+  top: 0;
+  -lh-property: 0;
+  // #{$dir-mode-align}: -webkit-calc(50% - 25px);
+  // #{$dir-mode-align}: -moz-calc(50% - 25px);
+  // #{$dir-mode-align}: calc(50% - 25px);
+  body:not(.rtl) & {
+    @include calc(left, "50% - 25px");
+  }
+  body.rtl & {
+    @include calc(right, "50% - 25px");
+  }
+  width: 50px;
+  height: 20px;
+  background-color: #ffffff;
+  color: #999999;
+  margin: 0 auto;
+}
+
+.login-container .loginbox .loginbox-or .or-line {
+  position: absolute;
+  height: 1px;
+  top: 10px;
+  // #{$dir-mode-align}: 40px;
+  // #{$dir-mode-align-inverse}: 40px;
+  left: 40px;
+  right: 40px;
+  background-color: #cccccc;
+}
+
+.login-container .loginbox .loginbox-textbox {
+  padding: 10px 30px;
+  .form-group {
+    margin-bottom: 0;
+  }
+}
+
+.login-container .loginbox .loginbox-textbox .form-control {
+  -webkit-border-radius: 4px !important;
+  -webkit-background-clip: padding-box !important;
+  -moz-border-radius: 4px !important;
+  -moz-background-clip: padding !important;
+  border-radius: 4px !important;
+  background-clip: padding-box !important;
+  border: 1px solid #333333;
+  height: 40px;
+}
+
+.login-container .loginbox .loginbox-textbox .form-control::placeholder {
+  color: #333333 !important;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.login-container .loginbox .loginbox-textbox .text-danger {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 11px;
+  line-height: 14px;
+  color: #EB5757 !important;
+  padding-top: 8px;
+}
+
+.login-container .loginbox .loginbox-forgot {
+  // padding-#{$dir-mode-align}: 40px;
+  body:not(.rtl) & {
+    padding-left: 40px;
+  }
+  body.rtl & {
+    padding-right: 40px;
+  }
+}
+
+.login-container .loginbox .loginbox-forgot a {
+  font-size: 11px;
+  color: #666666;
+}
+
+.login-container .loginbox .loginbox-submit {
+  padding: 10px 40px;
+}
+
+.login-container .loginbox .loginbox-signup {
+  text-align: center;
+  padding-top: 10px;
+}
+
+.login-container .loginbox .loginbox-signup a {
+  font-size: 13px;
+  color: #666666;
+}
+
+.login-container .loginbox .loginbox-textbox .btn-primary {
+  background-color: $admin-primary-color;
+  border-color: $admin-primary-color;
+  font-weight: bold;
+  height: 40px;
+}
+
+/*#endregion Login Page*/

@@ -1,0 +1,64 @@
+export interface IInternationalization {
+  rtl: boolean;
+  language: string;
+  flag: string;
+}
+
+interface IInternationalization_en extends IInternationalization {
+  rtl: false;
+  language: "english";
+  flag: "en";
+}
+interface IInternationalization_ar extends IInternationalization {
+  rtl: true;
+  language: "العربیه";
+  flag: "ar";
+}
+
+export type TInternationalization =
+  | IInternationalization_en
+  | IInternationalization_ar;
+
+interface ISetup {
+  endpoint: string;
+  documentTitle: string;
+  notify: {
+    timeout: {
+      error: number;
+      success: number;
+      warning: number;
+      info: number;
+      default: number;
+    };
+  };
+  recordDefaultLoadLength: number;
+  internationalization: TInternationalization;
+  mapConfig: {
+    zoom: number;
+    defaultLocation: [number, number];
+  };
+}
+
+export const Setup: ISetup = {
+  endpoint: process.env.REACT_APP_ENDPOINT as string,
+  documentTitle: "modish panel",
+  notify: {
+    timeout: {
+      error: 4000,
+      success: 2500,
+      warning: 3000,
+      info: 3000,
+      default: 3000,
+    },
+  },
+  recordDefaultLoadLength: 10,
+  internationalization: {
+    rtl: false,
+    language: "english",
+    flag: "en",
+  },
+  mapConfig: {
+    zoom: 13,
+    defaultLocation: [29.378586, 47.990341],
+  },
+};

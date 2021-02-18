@@ -1,0 +1,97 @@
+.zoho-select-input {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    .form-label-container {
+        text-align: right;
+        padding-right: 12px;
+        padding-top: 8px;
+    }
+
+    .form-content-container {
+        width: 59%;
+        .form-field-container {
+            width: 100%;
+            position: relative;
+            .css-yk16xz-control,
+            .css-1pahdxg-control {
+                width: 100%;
+                height: 36px !important;
+                min-height: 36px !important;
+                transition: initial;
+                border: none !important;
+                border-radius: 5px;
+                box-shadow: none !important;
+                color: #222;
+                background-color: transparent;
+                transition: 0.2s ease;
+                &:hover {
+                    box-shadow: none !important;
+                }
+                &:focus {
+                    border: none !important;
+                    box-shadow: none !important;
+                }
+                .css-g1d714-ValueContainer {
+                    position: unset !important;
+                    height: 100% !important;
+                }
+            }
+            .css-26l3qy-menu {
+                width: 100%;
+                margin: 0;
+                border-radius: 0;
+                z-index: 2;
+                .css-1n7v3ny-option {
+                    background-color: #efefef;
+                }
+                .css-yt9ioa-option,
+                .css-1n7v3ny-option,
+                .css-9gakcf-option {
+                    padding: 2px 40px;
+                    &:hover {
+                        background-color: #efefef;
+                    }
+                }
+            }
+
+            input {
+                height: unset !important;
+                border: unset !important;
+                &:hover {
+                    box-shadow: unset !important;
+                }
+                &:focus {
+                    border: unset !important;
+                    box-shadow: unset !important;
+                }
+            }
+            &.form-field-isRequired {
+                &::before {
+                    content: '';
+                    height: 98%;
+                    width: 3px;
+                    background: #f27b77;
+                    position: absolute;
+                    top: 1%;
+                    left: 0px;
+                    border-radius: 4px 0 0 4px;
+                    z-index: 1;
+                }
+            }
+        }
+    }
+    &.without-label {
+        .form-content-container {
+            width: 100%;
+        }
+    }
+}
+
+// .zoho-input-icon {
+//     .css-yk16xz-control,
+//     .css-1pahdxg-control {
+//         padding-right: 35px;
+//     }
+// }

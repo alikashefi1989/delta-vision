@@ -1,0 +1,46 @@
+.zoho-with-icon-input {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    .form-label-container {
+        text-align: right;
+        padding-right: 12px;
+        padding-top: 8px;
+    }
+
+    .form-content-container {
+        width: 59%;
+        .form-field-container {
+            width: 100%;
+            position: relative;
+            i {
+                position: absolute;
+                left: calc(100% - 32px);
+                margin: 0 !important;
+                font-size: 20px;
+                height: 36px;
+                width: 32px;
+                text-emphasis: center;
+                padding: 7px;
+                top: 0px;
+                background-color: #f4f5f6;
+                color: black !important;
+                border-radius: 0 4px 4px 0;
+            }
+            &.form-field-isRequired {
+                &::before {
+                    content: '';
+                    height: 98%;
+                    width: 3px;
+                    background: #f27b77;
+                    position: absolute;
+                    top: 1%;
+                    left: 0px;
+                    border-radius: 4px 0 0 4px;
+                    z-index: 1;
+                }
+            }
+        }
+    }
+}

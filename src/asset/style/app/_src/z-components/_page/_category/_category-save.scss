@@ -1,0 +1,93 @@
+div.app-MULTI_FILE_INPUT {
+    div.custom-multi-file.category-save-page-image-wrapper {
+        input.category-save-page-image-input {
+            display: none;
+        }
+        div.category-dragable-list-wrapper {
+            display: inline;
+            padding: 0;
+            margin: 0;
+            border: none;
+            div.category-dragable-item {
+                display: inline-block;
+                position: relative;
+                width: 48px;
+                height: 48px;
+                margin: 0;
+                padding: 0;
+                margin-top: 20px;
+                margin-bottom: 20px;
+                background-color: transparent;
+                &:hover {
+                    cursor: pointer;
+                    border: 1px solid#8b8b8b;
+                    border-radius: 8px;
+                    i {
+                        display: inline;
+                        color: black;
+                        z-index: 1000;
+                    }
+                    img {
+                        opacity: 0.5;
+                        width: 46px;
+                        height: 46px;
+                        border-radius: 6px;
+                    }
+                }
+                i {
+                    position: absolute;
+                    top: 2px;
+                    right: 2px;
+                    display: none;
+                    cursor: pointer;
+                }
+                img {
+                    display: inline-block;
+                    width: 48px;
+                    height: 48px;
+                    padding: 0;
+                    margin: 0;
+                    vertical-align: middle;
+                    border-radius: 8px;
+                }
+            }
+        }
+        label.custom-multi-file-label.category-save-page-image-label {
+            display: inline-block;
+            position: relative;
+            width: 48px;
+            height: 48px;
+            margin: 0;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            padding: 0;
+            border: none;
+            border-radius: 8px;
+            outline-style: none;
+            background: url(/static/media/img/icon/category-empty-image.svg)
+                no-repeat;
+            text-align: center;
+            vertical-align: middle;
+            cursor: pointer;
+            span.add-image-icon {
+                display: none;
+                width: 16px;
+                height: 16px;
+                background: url(/static/media/img/icon/category-add-image-icon.svg)
+                    no-repeat;
+                position: absolute;
+                bottom: 6px;
+                left: 16px;
+            }
+            &:hover {
+                outline-style: none;
+                background-color: none;
+                background: url(/static/media/img/icon/category-empty-image-hover.svg)
+                    no-repeat;
+                span.add-image-icon {
+                    display: inline;
+                }
+            }
+        }
+    }
+}

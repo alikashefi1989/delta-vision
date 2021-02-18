@@ -1,0 +1,101 @@
+.zoho_input_theme {
+    .form-label-container {
+        color: #222;
+        line-height: 17px;
+        font-size: 15px;
+        width: 30%;
+        max-width: 150px;
+    }
+
+    .form-field-container {
+        border: 1px solid #c3c6ca !important;
+        border-radius: 5px;
+        input {
+            width: 100%;
+            height: 36px;
+            transition: initial;
+            border: none !important;
+            border-radius: 5px;
+            box-shadow: none !important;
+            color: #222;
+            background-color: transparent;
+            transition: 0.2s ease;
+            &:hover {
+                box-shadow: none !important;
+            }
+            &:focus {
+                border: none !important;
+                box-shadow: none !important;
+            }
+        }
+        &:hover {
+            box-shadow: 0 0 6px #9e9e9e !important;
+        }
+        &:focus {
+            border: 1px solid #3c9df7 !important;
+            box-shadow: 0 0 6px #8bc4ff !important;
+        }
+    }
+
+    .invalid-feedback-- {
+        width: 100%;
+        margin-top: 1px;
+        color: #e64c48 !important;
+        white-space: initial;
+        padding-bottom: 10px;
+        font-size: 11px;
+        display: block;
+    }
+}
+
+.zoho-icon-input {
+    .form-field-container {
+        padding-right: 32px !important;
+        .zoho-icon {
+            position: absolute;
+            left: calc(100% - 32px);
+            margin: 0 !important;
+            font-size: 20px;
+            height: 36px;
+            width: 32px;
+            text-emphasis: center;
+            padding: 7px;
+            top: 0px;
+            background-color: #f4f5f6;
+            color: black !important;
+            border-radius: 0 4px 4px 0;
+            text-align: center;
+            cursor: pointer;
+        }
+    }
+
+    // input {
+    //     padding-right: 34px !important;
+    // }
+}
+
+.zoho-pre-value-input {
+    .form-field-container {
+        padding-left: 45px !important;
+        .zoho-pre-value {
+            position: absolute;
+            left: 0;
+            margin: 0 !important;
+            // font-size: 16px;
+            height: 36px;
+            width: 45px;
+            text-emphasis: center;
+            padding: 7px;
+            top: 0px;
+            background-color: #f4f5f6;
+            color: black !important;
+            border-radius: 4px 0 0 4px;
+            text-align: center;
+            cursor: pointer;
+        }
+    }
+
+    // input {
+    //     padding-right: 34px !important;
+    // }
+}

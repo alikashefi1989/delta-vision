@@ -1,0 +1,119 @@
+div.phone-list-main-wraper {
+    margin: 0;
+    margin-top: -6px;
+    padding: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    div.btn-wrapper-child {
+        margin: 0;
+        padding: 0;
+        div.phone-first-item-wrapper {
+            height: 36px;
+            max-height: 36px;
+            vertical-align: auto;
+            div.phone-number {
+                display: inline-block;
+                width: 99px;
+                height: 18px;
+                margin-top: 9px;
+                margin-bottom: 9px;
+                // margin-left: 9px; // 0;
+                margin-right: 4px; /// 0;
+                padding: 0;
+                max-width: 99px;
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+            }
+            div.phone-icon {
+                display: inline-block;
+                margin-top: 10px;
+                margin-bottom: 11px;
+                margin-left: 4px; // 0;
+                margin-right: 8px; // 4px;
+                padding: 0;
+                width: 15px;
+                height: 15px;
+                background: url(/static/media/img/icon/phone.svg) no-repeat;
+            }
+            div.show-btn {
+                display: inline-block;
+                position: relative;
+                padding: 0;
+                border: 1px solid rgba(51, 140, 240, 0.9);
+                border-radius: 4px;
+                background-color: rgba(51, 140, 240, 0.1);
+                color: rgba(51, 140, 240, 0.9);
+                min-width: 98px;
+                width: 98px;
+                max-width: 98px; //94px;
+                height: 26px;
+                max-height: 26px;
+                vertical-align: super;
+                div.text {
+                    display: inline-block;
+                    margin: 0;
+                    margin-top: 2px;
+                    margin-bottom: 4px;
+                    padding: 0;
+                    padding-right: 3px; // 2px;
+                    padding-left: 3px; // 2px;
+                    width: 84;
+                    max-width: 84px;
+                    height: 18px;
+                    max-height: 18px;
+                    margin-right: 18px;
+                    overflow: hidden;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                    background-color: transparent;
+                    color: rgba(51, 140, 240, 0.9);
+                    font-size: 13px;
+                    font-family: 'Lato';
+                    font-weight: 400;
+                }
+                div.angle-icon-wrapper {
+                    position: absolute;
+                    top: 1px;
+                    right: 6px;
+                    display: inline-block;
+                    margin: 0;
+                    padding: 0;
+                    background-color: transparent;
+                    color: rgba(51, 140, 240, 0.9);
+                    i.fa {
+                        color: rgba(51, 140, 240, 0.9);
+                    }
+                }
+            }
+        }
+    }
+    div.phone-other-items-wrapper {
+        div.phone-number {
+            display: inline-block;
+            width: 99px;
+            height: 18px;
+            margin-top: 9px;
+            margin-bottom: 9px;
+            // margin-left: 9px; // 0;
+            margin-right: 4px; // 0;
+            padding: 0;
+            max-width: 99px;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+        div.phone-icon {
+            display: inline-block;
+            margin-top: 10px;
+            margin-bottom: 11px;
+            margin-left: 4px; //0;
+            margin-right: 8px; //4px;
+            padding: 0;
+            width: 15px;
+            height: 15px;
+            background: url(/static/media/img/icon/phone.svg) no-repeat;
+        }
+    }
+}
