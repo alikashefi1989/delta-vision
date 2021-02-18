@@ -1,10 +1,9 @@
-import { Action } from "redux";
-import { ILanguage } from "../../../model/language.model";
-import { EACTIONS } from "../../ActionEnum";
+import { Action } from 'redux';
+import { EACTIONS } from '../../ActionEnum';
 
 export interface ILanguage_schema {
-    list: Array<ILanguage>;
-    defaultLanguage: ILanguage | null;
+    list: Array<any>;
+    defaultLanguage: any | null;
 }
 
 export interface ILanguageAction extends Action<EACTIONS> {

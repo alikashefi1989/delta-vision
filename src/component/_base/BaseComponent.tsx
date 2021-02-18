@@ -1,6 +1,5 @@
 import React from 'react';
 import { Setup, TInternationalization } from '../../config/setup';
-import { Localization } from '../../config/localization/localization';
 import { toast, ToastOptions, ToastContainerProps } from 'react-toastify';
 //
 import moment from 'moment';
@@ -11,7 +10,6 @@ import { Store2 } from '../../redux/store';
 import { History } from 'history';
 import { action_user_logged_out } from '../../redux/action/user';
 import { action_remove_token } from '../../redux/action/token';
-import { BaseService } from '../../service/base.service';
 // import { action_remove_authentication } from '../../redux/action/authentication';
 import { AppRoute } from '../../config/route';
 
@@ -59,10 +57,10 @@ export abstract class BaseComponent<
                     //     obj.body = Localization.msg.ui.error_occurred;
                     // }
                 } else {
-                    obj.body = Localization.msg.ui.error_occurred;
+                    obj.body = '';
                 }
             } else {
-                obj.body = Localization.msg.ui.error_occurred; // no_network_connection
+                obj.body = ''; // no_network_connection
             }
         }
 
@@ -115,7 +113,7 @@ export abstract class BaseComponent<
     // }
 
     apiSuccessNotify(
-        notifyBody: string = Localization.msg.ui.action_succeeded,
+        notifyBody: string = '',
         config: ToastOptions = { autoClose: Setup.notify.timeout.success }
     ) {
         toast.success(notifyBody, this.getNotifyConfig(config));
@@ -214,16 +212,12 @@ export abstract class BaseComponent<
 
         Store2.dispatch(action_user_logged_out());
         Store2.dispatch(action_remove_token());
-        BaseService.removeToken();
         // Store2.dispatch(action_remove_authentication());
 
         history.push(AppRoute.routeData.login.url());
     }
 
-    navigate(
-        route = AppRoute.routeData.dashboard.url(),
-        history = this.props.history
-    ) {
+    navigate(route = '', history = this.props.history) {
         history?.push(route);
     }
 }

@@ -1,12 +1,12 @@
-import React from "react";
-import { MapDispatchToProps, connect } from "react-redux";
-import { Dispatch } from "redux";
-import { redux_state } from "../../../redux/app_state";
-import { TInternationalization } from "../../../config/setup";
-import { BaseComponent } from "../../_base/BaseComponent";
-import { Localization } from "../../../config/localization/localization";
-import Modal from "react-bootstrap/Modal";
-import { BtnLoader } from "../../form/btn-loader/BtnLoader";
+import React from 'react';
+import { MapDispatchToProps, connect } from 'react-redux';
+import { Dispatch } from 'redux';
+import { redux_state } from '../../../redux/app_state';
+import { TInternationalization } from '../../../config/setup';
+import { BaseComponent } from '../../_base/BaseComponent';
+import { Localization } from '../../../config/localization/localization';
+import Modal from 'react-bootstrap/Modal';
+import { BtnLoader } from '../../form/btn-loader/BtnLoader';
 
 interface IProps {
     internationalization: TInternationalization;
@@ -21,63 +21,71 @@ interface IProps {
     closeBtn_text?: string | (() => JSX.Element);
 }
 
-interface IState {
-}
+interface IState {}
 
 class ConfirmNotifyComponent extends BaseComponent<IProps, IState> {
-    static defaultProps = { btnLoader: false, };
+    static defaultProps = { btnLoader: false };
 
-    closeModal() { this.props.onHide(); }
+    closeModal() {
+        this.props.onHide();
+    }
 
     modal_render() {
         return (
             <>
-                <Modal show={this.props.show} onHide={() => this.closeModal()}  >
+                <Modal show={this.props.show} onHide={() => this.closeModal()}>
                     <Modal.Body>
                         <div className="row">
                             <div className="col-12">
-                                {
-                                    this.props.msgFunc ?
-                                        this.props.msgFunc() :
-                                        this.props.msg
-                                }
+                                {this.props.msgFunc
+                                    ? this.props.msgFunc()
+                                    : this.props.msg}
                             </div>
                         </div>
                     </Modal.Body>
                     <Modal.Footer className="pt-0 border-top-0">
-                        <button className="btn btn-light-- btn-sm text-uppercase min-w-70px" onClick={() => this.closeModal()}>
-                            {
-                                this.props.closeBtn_text ?
-                                    (typeof this.props.closeBtn_text === 'string' ?
-                                        this.props.closeBtn_text : this.props.closeBtn_text())
-                                    :
-                                    Localization.close
-                            }
+                        <button
+                            className="btn btn-light-- btn-sm text-uppercase min-w-70px"
+                            onClick={() => this.closeModal()}
+                        >
+                            {this.props.closeBtn_text
+                                ? typeof this.props.closeBtn_text === 'string'
+                                    ? this.props.closeBtn_text
+                                    : this.props.closeBtn_text()
+                                : 'Localization.close'}
                         </button>
                         <BtnLoader
-                            btnClassName={"btn text-primary btn-sm text-uppercase min-w-70px " + this.props.confirmBtn_className}
+                            btnClassName={
+                                'btn text-primary btn-sm text-uppercase min-w-70px ' +
+                                this.props.confirmBtn_className
+                            }
                             loading={this.props.btnLoader!}
                             onClick={() => this.props.onConfirm()}
                         >
-                            {
-                                this.props.confirmBtn_text ?
-                                    (typeof this.props.confirmBtn_text === 'string' ?
-                                        this.props.confirmBtn_text : this.props.confirmBtn_text())
-                                    :
-                                    Localization.confirm
-                            }
+                            {this.props.confirmBtn_text
+                                ? typeof this.props.confirmBtn_text === 'string'
+                                    ? this.props.confirmBtn_text
+                                    : this.props.confirmBtn_text()
+                                : 'Localization.confirm'}
                         </BtnLoader>
                     </Modal.Footer>
                 </Modal>
             </>
-        )
+        );
     }
 
-    render() { return (<>{this.modal_render()}</>); }
+    render() {
+        return <>{this.modal_render()}</>;
+    }
 }
 
-const dispatch2props: MapDispatchToProps<{}, {}> = (dispatch: Dispatch) => { return {}; };
-const state2props = (state: redux_state) => {
-    return {internationalization: state.internationalization,};
+const dispatch2props: MapDispatchToProps<{}, {}> = (dispatch: Dispatch) => {
+    return {};
 };
-export const ConfirmNotify = connect(state2props, dispatch2props)(ConfirmNotifyComponent);
+const state2props = (state: redux_state) => {
+    return { internationalization: state.internationalization };
+};
+export const ConfirmNotify = connect(
+    state2props,
+    dispatch2props
+)(ConfirmNotifyComponent);
