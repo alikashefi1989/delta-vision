@@ -1,0 +1,48 @@
+.pro-sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: none;
+    z-index: 10001;
+    &.collapsed {
+        min-width: 140px;
+    }
+    .pro-sidebar-inner {
+        .pro-sidebar-layout {
+            .pro-sidebar-header {
+                .sidebar-logo-wrapper {
+                    .logo {
+                        color: white;
+                    }
+                }
+            }
+        }
+    }
+}
+
+body {
+    &.rtl {
+        .pro-sidebar {
+            left: none;
+            right: 0;
+            top: 0;
+            z-index: 10001;
+        }
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    body {
+        .pro-sidebar {
+            display: none;
+        }
+    }
+
+    body {
+        &.rtl {
+            .pro-sidebar {
+                display: none;
+            }
+        }
+    }
+}

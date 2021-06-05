@@ -41,7 +41,7 @@ interface ISetup {
 
 export const Setup: ISetup = {
     endpoint: process.env.REACT_APP_ENDPOINT as string,
-    documentTitle: 'DELTA VISION',
+    documentTitle: 'DELTA AVARAN VISION',
     notify: {
         timeout: {
             error: 4000,
@@ -58,7 +58,7 @@ export const Setup: ISetup = {
         flag: 'en',
     },
     mapConfig: {
-        zoom: 13,
-        defaultLocation: [29.378586, 47.990341],
+        zoom: 18,
+        defaultLocation: [35.783378, 51.355672],
     },
 };

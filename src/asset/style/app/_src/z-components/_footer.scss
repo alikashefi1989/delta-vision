@@ -1,0 +1,61 @@
+.content-wrapper {
+    div.footer {
+        padding: 0 !important;
+        padding-bottom: 90px !important;
+        margin: 0;
+        margin-top: 35px;
+        background-color: transparent;
+        min-height: 300px;
+        height: auto;
+        border-top: 3px solid #116466;
+        .row {
+            .column-1 {
+                .description-for-link {
+                    color: #66fcf1;
+                    margin-left: 10px;
+                    margin-right: 10px;
+                    &:hover {
+                        color: white;
+                    }
+                }
+            }
+        }
+        .social-media {
+            .fa-telegram {
+                &:hover {
+                    color: #0088cc !important;
+                }
+            }
+            .fa-whatsapp {
+                &:hover {
+                    color: #4fce5d !important;
+                }
+            }
+            .fa-instagram {
+                &:hover {
+                    color: #ff3939 !important;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    body {
+        div#content {
+            div.footer {
+                padding: 0 !important;
+            }
+        }
+    }
+
+    body {
+        &.rtl {
+            div#content {
+                div.footer {
+                    padding: 0 !important;
+                }
+            }
+        }
+    }
+}

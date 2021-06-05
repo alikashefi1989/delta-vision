@@ -1,0 +1,32 @@
+.shrink-wrapper {
+    .image-wrapper {
+        min-width: 300px;
+        min-height: 300px;
+        max-width: 300px;
+        max-height: 300px;
+        margin: auto;
+        border-radius: 10px;
+        img {
+            min-width: 300px;
+            min-height: 300px;
+            max-width: 300px;
+            max-height: 300px;
+            margin: auto;
+            border-radius: 10px;
+        }
+        :hover {
+            border: 2px solid #66fcf1;
+        }
+    }
+    .product-code {
+        margin: auto;
+        margin-top: 15px;
+        padding-top: 3px;
+        color: white;
+        height: 30px;
+        width: 50%;
+        text-align: center;
+        background-color: #3500d3;
+        border-radius: 5px;
+    }
+}

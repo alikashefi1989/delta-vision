@@ -1,0 +1,94 @@
+body {
+    // background-image: linear-gradient(#444, #000);
+    div#content {
+        div.content-wrapper {
+            position: relative;
+            top: 88px;
+            background-color: #282828;
+        }
+    }
+}
+
+body {
+    &.rtl {
+        .toggle-wrapeer {
+            right: 10px;
+        }
+        div#content {
+            div.content-wrapper {
+                position: relative;
+                top: 88px;
+                background-color: #282828;
+            }
+        }
+    }
+}
+
+.toggle-wrapeer {
+    z-index: 10001;
+    cursor: pointer;
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: rgba(24, 20, 20, 0.7);
+    animation: bgColorChange 3s infinite;
+    color: white;
+    text-align: center;
+    padding-top: 24px;
+    border: 2px solid rgba(154, 205, 50, 0.7);
+    &:hover {
+        animation: none;
+        background-color: rgb(24, 20, 20);
+        border: 3px solid rgb(154, 205, 50);
+        i {
+            color: yellowgreen;
+        }
+    }
+}
+
+@keyframes bgColorChange {
+    from {
+        background-color: rgba(24, 20, 20, 0.7);
+        border: 2px solid rgba(154, 205, 50, 0.7);
+        padding-top: 24px;
+    }
+
+    to {
+        background-color: rgba(0, 143, 179, 0.7);
+        border: 5px solid rgba(22, 29, 7, 0.7);
+        padding-top: 21px;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    body {
+        .toggle-wrapeer {
+            display: none;
+        }
+        div#content {
+            div.content-wrapper {
+                position: relative;
+                top: 116px;
+                background-color: #282828;
+            }
+        }
+    }
+
+    body {
+        &.rtl {
+            .toggle-wrapeer {
+                display: none;
+            }
+            div#content {
+                div.content-wrapper {
+                    position: relative;
+                    top: 116px;
+                    background-color: #282828;
+                }
+            }
+        }
+    }
+}

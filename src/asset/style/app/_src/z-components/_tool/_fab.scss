@@ -1,13 +1,13 @@
-@import "~react-tiny-fab/dist/styles.css";
+// @import "~react-tiny-fab/dist/styles.css";
 
 ul.rtf {
-  padding: 0;
-  direction: ltr;
-  z-index: 1;
+    padding: 0;
+    direction: ltr;
+    z-index: 1;
 
-  &.open .rtf--mb > * {
-    // transform-origin: center center;
-    transform: rotate(360deg);
-    // transition: ease-in-out transform 0.2s;
-  }
+    &.open .rtf--mb > * {
+        // transform-origin: center center;
+        transform: rotate(360deg);
+        // transition: ease-in-out transform 0.2s;
+    }
 }

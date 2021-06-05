@@ -1,0 +1,32 @@
+.steering-wheel-cover-wrapper {
+    .image-wrapper {
+        min-width: 270px;
+        min-height: 270px;
+        max-width: 270px;
+        max-height: 270px;
+        margin: auto;
+        border-radius: 10px;
+        img {
+            min-width: 270px;
+            min-height: 270px;
+            max-width: 100%;
+            max-height: 100%;
+            margin: auto;
+            border-radius: 10px;
+        }
+        :hover {
+            border: 2px solid #66fcf1;
+        }
+    }
+    .product-code {
+        margin: auto;
+        margin-top: 15px;
+        padding-top: 3px;
+        color: white;
+        height: 30px;
+        width: 50%;
+        text-align: center;
+        background-color: #3500d3;
+        border-radius: 5px;
+    }
+}

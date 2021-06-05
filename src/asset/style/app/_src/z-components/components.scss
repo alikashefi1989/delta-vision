@@ -1,10 +1,14 @@
-@import 'toastify';
-@import 'content-loader';
-@import 'pagination';
-@import './row-removeable-table';
-@import './component-email-to';
+// @import 'toastify';
+// @import 'content-loader';
+// @import 'pagination';
+// @import './row-removeable-table';
+// @import './component-email-to';
 //
-@import '_form/form';
+// @import '_form/form';
 @import '_tool/tool';
 @import '_page/page';
-@import './table';
+// @import './table';
+@import './sidebar';
+@import './content-body';
+@import './footer';
+@import './header';

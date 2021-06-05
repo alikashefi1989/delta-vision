@@ -34,13 +34,13 @@ interface IProps {
 class LayoutAccountComponent extends React.Component<IProps> {
     componentDidMount() {
         if (this.props.logged_in_user) {
-            this.props.history.push('/dashboard');
+            this.props.history.push('/home');
         }
     }
 
     shouldComponentUpdate() {
         if (this.props.logged_in_user) {
-            this.props.history.push('/dashboard');
+            this.props.history.push('/home');
             return false;
         }
         return true;

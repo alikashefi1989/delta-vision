@@ -25,7 +25,7 @@ export interface IHandleErrorResolve {
     body: string;
 }
 
-interface IBaseProps {
+export interface IBaseProps {
     history?: History;
     internationalization: TInternationalization;
 }
@@ -214,7 +214,8 @@ export abstract class BaseComponent<
         Store2.dispatch(action_remove_token());
         // Store2.dispatch(action_remove_authentication());
 
-        history.push(AppRoute.routeData.login.url());
+        // history.push(AppRoute.routeData.login.url());
+        history.push(AppRoute.routeData.home.url());
     }
 
     navigate(route = '', history = this.props.history) {
