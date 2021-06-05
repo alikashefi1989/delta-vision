@@ -10,14 +10,14 @@ import { persistor, Store2 } from './redux/store';
 import { PersistGate } from 'redux-persist/integration/react';
 // import TopBarProgress from 'react-topbar-progress-indicator';
 // import { appColor, APP_COLOR_NAME } from './config/appColor';
-import * as Sentry from '@sentry/react';
-import { Integrations } from '@sentry/tracing';
+// import * as Sentry from '@sentry/react';
+// import { Integrations } from '@sentry/tracing';
 
-Sentry.init({
-    dsn: 'https://ee3c511e61a643c39993d485026e4396@sentry.nizek.com/8',
-    integrations: [new Integrations.BrowserTracing()],
-    tracesSampleRate: 1.0,
-});
+// Sentry.init({
+//     dsn: 'https://ee3c511e61a643c39993d485026e4396@sentry.---.com/8',
+//     integrations: [new Integrations.BrowserTracing()],
+//     tracesSampleRate: 1.0,
+// });
 
 // TopBarProgress.config({
 //     // barColors: {
