@@ -4,10 +4,11 @@
         padding-bottom: 90px !important;
         margin: 0;
         margin-top: 35px;
-        background-color: transparent;
+        background-color: rgb(52, 58, 61);
         min-height: 300px;
         height: auto;
         border-top: 3px solid #116466;
+        color: rgb(88, 88, 88);
         .row {
             .column-1 {
                 .description-for-link {
@@ -17,6 +18,9 @@
                     &:hover {
                         color: white;
                     }
+                }
+                h5 {
+                    line-height: 26px;
                 }
             }
         }

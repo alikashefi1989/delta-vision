@@ -45,8 +45,9 @@ export const en: II18 = {
         footer_text:
             'Delta Avaran Vision Company started its activities in 2006 with the production and import of industrial equipment related to the automotive and rail industriesand has continued to grow successfully.',
         company_address:
-            'Tehran - Saadat Abad - Above Bostan Square - Corner of E 12th Aseman St - No. 72 - Second Floor',
-        company_tel: '+(21) 22355222-22355227',
+            'Second Floor - No. 72 - Corner of E 12th Aseman St - Above Ketab Square - Saadat Abad - Tehran',
+        // 'Tehran - Saadat Abad - Above Ketab Square - Corner of E 12th Aseman St - No. 72 - Second Floor',
+        company_tel: '+98(21) 223 625 59',
         our_custumer: 'our customers',
         contact_us: 'contact us',
         address: 'address',

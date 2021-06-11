@@ -8,11 +8,11 @@ body {
             top: 0;
             display: block;
             width: 100%;
-            background-color: #116466;
+            background-color: white;
             div.top-part {
                 padding: 0;
                 margin: 0;
-                background-color: #116466;
+                background-color: white;
                 position: relative;
                 ul.social-media {
                     display: none !important;
@@ -56,8 +56,8 @@ body {
                     padding: 0;
                     margin: 0;
                     img.logo {
-                        max-width: 150px;
-                        max-height: 70px;
+                        max-width: 160px;
+                        max-height: 80px;
                         margin-top: 5px;
                         margin-bottom: 0px;
                     }
@@ -71,16 +71,16 @@ body {
                         padding-right: 15px;
                         i.fa {
                             cursor: pointer;
-                            color: #00ff80 !important;
+                            color: black !important;
                             &:hover {
-                                color: #66fcf1 !important;
+                                color: rgb(0, 119, 255) !important;
                             }
                         }
                     }
                     div.clock {
                         margin: auto;
                         font-size: 20px;
-                        color: rgb(0, 255, 221);
+                        color: black;
                     }
                 }
             }
@@ -144,8 +144,12 @@ body {
                                 margin: 0;
                                 color: white !important;
                                 &:hover {
-                                    color: #66fcf1 !important;
-                                    border-bottom-color: #66fcf1 !important;
+                                    color: rgb(151, 190, 235) !important;
+                                    border-bottom-color: rgb(
+                                        151,
+                                        190,
+                                        235
+                                    ) !important;
                                     ul.sub-menu {
                                         display: block;
                                         border-top: none;
@@ -218,10 +222,10 @@ body {
     /* modified */
     from {
         color: white;
-        border-bottom-color: #66fcf1;
+        border-bottom-color: rgb(151, 190, 235) !important;
     }
     to {
-        color: #66fcf1;
+        color: rgb(151, 190, 235) !important;
         border-bottom-color: white;
     }
 }
@@ -229,7 +233,7 @@ body {
 @keyframes subMenuTopBorderColor {
     /* modified */
     from {
-        border-top-color: #66fcf1;
+        border-top-color: rgb(151, 190, 235) !important;
     }
     to {
         border-top-color: white;

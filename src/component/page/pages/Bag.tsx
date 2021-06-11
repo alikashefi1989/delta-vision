@@ -22,7 +22,7 @@ class BagComponent<IProps, IState> extends MainStructureComponent {
         return (
             <>
                 <div className="container bag-wrapper">
-                    <h2 className="text-capitalize text-center text-white pt-4 pb-4">
+                    <h2 className="text-capitalize text-center text-white- pt-4 pb-4">
                         {Localization.bag}
                     </h2>
                     <div className="d-flex justify-content-center">

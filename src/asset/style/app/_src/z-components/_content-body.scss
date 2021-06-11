@@ -4,7 +4,7 @@ body {
         div.content-wrapper {
             position: relative;
             top: 88px;
-            background-color: #282828;
+            background-color: white;
         }
     }
 }
@@ -18,7 +18,7 @@ body {
             div.content-wrapper {
                 position: relative;
                 top: 88px;
-                background-color: #282828;
+                background-color: white;
             }
         }
     }
@@ -72,8 +72,11 @@ body {
             div.content-wrapper {
                 position: relative;
                 top: 116px;
-                background-color: #282828;
+                background-color: white;
             }
+        }
+        div.slide-title {
+            display: inline-block !important;
         }
     }
 
@@ -86,8 +89,11 @@ body {
                 div.content-wrapper {
                     position: relative;
                     top: 116px;
-                    background-color: #282828;
+                    background-color: white;
                 }
+            }
+            div.slide-title {
+                display: inline-block !important;
             }
         }
     }

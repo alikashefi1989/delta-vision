@@ -34,7 +34,7 @@ class SteeringWheelCoverComponent<
         return (
             <>
                 <div className="container steering-wheel-cover-wrapper">
-                    <h2 className="text-capitalize text-center text-white pt-4 pb-4">
+                    <h2 className="text-capitalize text-center text-white- pt-4 pb-4">
                         {Localization.steering_wheel_cover}
                     </h2>
                     <div className="row">

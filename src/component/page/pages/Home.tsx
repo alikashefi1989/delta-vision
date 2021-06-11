@@ -124,6 +124,105 @@ class HomeComponent<IProps, IState> extends MainStructureComponent {
         },
     ];
 
+    imagesTitleAndTirget = [
+        {
+            index: 0,
+            title: Localization.text.company_brand,
+            target: AppRoute.routeData.company.url(),
+        },
+        {
+            index: 1,
+            title: Localization.cellophane,
+            target: AppRoute.routeData.cellophane.url(),
+        },
+        {
+            index: 2,
+            title: Localization.seat_cover,
+            target: AppRoute.routeData.seat_cover.url(),
+        },
+        {
+            index: 3,
+            title: Localization.steering_wheel_cover,
+            target: AppRoute.routeData.steering_wheel_cover.url(),
+        },
+        {
+            index: 4,
+            title: Localization.cellophane,
+            target: AppRoute.routeData.cellophane.url(),
+        },
+        {
+            index: 5,
+            title: Localization.painting_promask,
+            target: AppRoute.routeData.painting_promask.url(),
+        },
+        {
+            index: 6,
+            title: Localization.fender_cover,
+            target: AppRoute.routeData.fender_cover.url(),
+        },
+        {
+            index: 7,
+            title: Localization.seat_cover,
+            target: AppRoute.routeData.seat_cover.url(),
+        },
+        {
+            index: 8,
+            title: Localization.bag,
+            target: AppRoute.routeData.bag.url(),
+        },
+        {
+            index: 9,
+            title: Localization.fender_cover,
+            target: AppRoute.routeData.fender_cover.url(),
+        },
+        {
+            index: 10,
+            title: Localization.seat_cover,
+            target: AppRoute.routeData.seat_cover.url(),
+        },
+        {
+            index: 11,
+            title: Localization.cellophane,
+            target: AppRoute.routeData.cellophane.url(),
+        },
+        {
+            index: 12,
+            title: Localization.fender_cover,
+            target: AppRoute.routeData.fender_cover.url(),
+        },
+        {
+            index: 13,
+            title: Localization.cellophane,
+            target: AppRoute.routeData.cellophane.url(),
+        },
+        {
+            index: 14,
+            title: Localization.feethold,
+            target: AppRoute.routeData.feethold.url(),
+        },
+        {
+            index: 15,
+            title: Localization.contact,
+            target: AppRoute.routeData.contact.url(),
+        },
+    ];
+
+    protected slideTitleOrTargetReturner(
+        index: number,
+        field: 'title' | 'target'
+    ): string {
+        let item: Array<{
+            index: number;
+            title: string;
+            target: string;
+        }> = this.imagesTitleAndTirget.filter(
+            (val: { index: number; title: string; target: string }) => {
+                return val.index === index;
+            }
+        );
+        return item[0][field];
+    }
+
     customers = [
         {
             original:
@@ -174,6 +273,18 @@ class HomeComponent<IProps, IState> extends MainStructureComponent {
                             <ImageGallery
                                 items={this.images}
                                 showThumbnails={true}
+                                onSlide={(currentIndex: number) =>
+                                    this.setState({
+                                        ...this.state,
+                                        homeSliderCurrentSlideIndex: currentIndex,
+                                    })
+                                }
+                                onThumbnailClick={(e: any, index: number) =>
+                                    this.setState({
+                                        ...this.state,
+                                        homeSliderCurrentSlideIndex: index,
+                                    })
+                                }
                                 infinite={true}
                                 thumbnailPosition={
                                     this.props.internationalization.rtl
@@ -188,6 +299,22 @@ class HomeComponent<IProps, IState> extends MainStructureComponent {
                                 }
                                 autoPlay={true}
                             />
+                        </div>
+                        <div
+                            className="slide-title"
+                            onClick={() =>
+                                this.props.history?.push(
+                                    this.slideTitleOrTargetReturner(
+                                        this.state.homeSliderCurrentSlideIndex,
+                                        'target'
+                                    )
+                                )
+                            }
+                        >
+                            {this.slideTitleOrTargetReturner(
+                                this.state.homeSliderCurrentSlideIndex,
+                                'title'
+                            )}
                         </div>
                     </div>
                     <div className="row">

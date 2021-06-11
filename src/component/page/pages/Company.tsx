@@ -22,7 +22,7 @@ class CompanyComponent<IProps, IState> extends MainStructureComponent {
         return (
             <>
                 <div className="container company-wrapper">
-                    <h2 className="text-capitalize text-center text-white pt-4">
+                    <h2 className="text-capitalize text-center text-white- pt-4">
                         {Localization.about_us}
                     </h2>
                     <div className="row part-1">

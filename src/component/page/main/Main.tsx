@@ -27,6 +27,7 @@ interface IProps extends IBaseProps {
 interface IState {
     menuIsOpen: boolean;
     timeStamp: number | undefined;
+    homeSliderCurrentSlideIndex: number;
 }
 
 export default class MainStructureComponent extends BaseComponent<
@@ -36,6 +37,7 @@ export default class MainStructureComponent extends BaseComponent<
     state = {
         menuIsOpen: false,
         timeStamp: undefined,
+        homeSliderCurrentSlideIndex: 0,
     };
 
     private timeStampUpdater: any = undefined;

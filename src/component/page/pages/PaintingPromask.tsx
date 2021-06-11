@@ -37,7 +37,7 @@ class PaintingPromaskComponent<IProps, IState> extends MainStructureComponent {
         return (
             <>
                 <div className="container painting-promask-wrapper">
-                    <h2 className="text-capitalize text-center text-white pt-4 pb-4">
+                    <h2 className="text-capitalize text-center text-white- pt-4 pb-4">
                         {Localization.painting_promask}
                     </h2>
                     <div className="row">

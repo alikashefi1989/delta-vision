@@ -45,7 +45,7 @@ class CustomersComponent<IProps, IState> extends MainStructureComponent {
         return (
             <>
                 <div className="container customer-wrapper">
-                    <h2 className="text-capitalize text-center text-white pt-4 pb-4">
+                    <h2 className="text-capitalize text-center text-white- pt-4 pb-4">
                         {Localization.customers}
                     </h2>
                     <div className="row">
