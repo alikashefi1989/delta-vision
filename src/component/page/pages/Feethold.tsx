@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import { redux_state } from '../../../redux/app_state';
 import { Dispatch } from 'redux';
 import { connect } from 'react-redux';
@@ -18,20 +18,42 @@ interface IProps extends IBaseProps {
 interface IState {}
 
 class FeetholdComponent<IProps, IState> extends MainStructureComponent {
+    private baseUrl: string =
+        'https://res.cloudinary.com/delta-avaran-vision/image/upload/v1623971523/feet_hold/';
+
+    private seatCoversLinksLink: Array<string> = [
+        'kaf_payi_ts0ky5.jpg',
+        'rokesh_mix_1_jzme55.jpg',
+        'WhatsApp_Image_2021-06-11_at_21.04.30_fxjzmv.jpg',
+    ];
+
     bodyRendererFunction(): JSX.Element {
         return (
             <>
-                <div className="container feethold-wrapper">
+                <div className="container seat-cover-wrapper">
                     <h2 className="text-capitalize text-center text-white- pt-4 pb-4">
                         {Localization.feethold}
                     </h2>
-                    <div className="d-flex justify-content-center">
-                        <div className="image-wrapper">
-                            <img
-                                src="https://res.cloudinary.com/delta-avaran-vision/image/upload/v1622926210/other_images/coming-soon_uvo1ft.jpg"
-                                alt=""
-                            />
-                        </div>
+                    <div className="row">
+                        {this.seatCoversLinksLink.map(
+                            (item: string, i: number) => {
+                                return (
+                                    <Fragment key={i}>
+                                        <div className="col-md-4 col-sm-12 p-4">
+                                            <div className="image-wrapper">
+                                                <img
+                                                    src={this.baseUrl + item}
+                                                    alt=""
+                                                />
+                                            </div>
+                                            <div className="product-code">{`FH - ${
+                                                i + 1
+                                            }`}</div>
+                                        </div>
+                                    </Fragment>
+                                );
+                            }
+                        )}
                     </div>
                 </div>
             </>

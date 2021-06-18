@@ -22,6 +22,7 @@ class CellophaneComponent<IProps, IState> extends MainStructureComponent {
         'https://res.cloudinary.com/delta-avaran-vision/image/upload/v1622884859/selefon/';
 
     private cellophanesLinksLink: Array<string> = [
+        'WhatsApp_Image_2021-06-11_at_21.04.28_xuf8mx.jpg',
         '10_djpghw.jpg',
         '47_pmtje8.jpg',
         '46_sbbwpl.jpg',
